@@ -3,13 +3,15 @@ UI Components
 
 > Reusable UI components
 
-Dependencies:
+# Components
 
-* Bootstrap 3.x
+## Colors
 
-We want to eventually not depend on bootstrap at all, even if it means copying over the styles that we depend on into our own components.
+Celery colors as variables.
 
-## TODO
+## Button
 
-* Bower setup
-* Structure components
+Button styles
+
+# License
+MIT
