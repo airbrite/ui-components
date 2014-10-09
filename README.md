@@ -13,5 +13,9 @@ Celery colors as variables.
 
 Button styles
 
+## Logo
+
+SVG Logo
+
 # License
 MIT
