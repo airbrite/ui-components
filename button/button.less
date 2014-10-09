@@ -1,0 +1,141 @@
+// Markup
+// <a href="#" class="Button Button--default">Button</a>
+
+@button-font-size: 15px;
+@button-small-font-size: @button-font-size - 1px;
+@button-large-font-size: @button-font-size + 3px;
+@button-font-weight: 400;
+
+@button-height: @input-height-base;
+@button-vertical-padding: 15px;
+@button-horizontal-padding: 20px;
+
+@button-rounded-border-radius: 40px;
+@button-sharp-border-radius: @border-radius-base;
+
+@button-transition-timing: 100ms;
+@button-transition-fast-timing: 50ms;
+
+.button-animation(@duration) {
+  transition: background-color @duration cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+
+.button-vertical-padding(@height, @font-size) {
+  @button-vertical-padding: (@height - @font-size) / 2;
+}
+
+.Button {
+  display: inline-block;
+  font-weight: @button-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-image: none;
+  white-space: nowrap;
+  appearance: none;
+  font-size: @button-font-size;
+  .button-vertical-padding(@button-height, @button-font-size);
+  padding: @button-vertical-padding @button-horizontal-padding;
+  line-height: 1;
+  border: 0;
+  border-radius: @button-rounded-border-radius;
+  .button-animation(@button-transition-timing);
+
+  &:hover {
+    .button-animation(@button-transition-timing);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:active,
+  &:focus {
+    .button-animation(@button-transition-fast-timing);
+  }
+
+  &:active,
+  &:focus,
+  &:active:focus {
+    outline: none;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.Button--sharp {
+  border-radius: @button-sharp-border-radius;
+}
+
+.Button--full {
+  width: 100%;
+  margin-bottom: @vertical-gutter-height;
+}
+
+.Button--small {
+  font-size: @button-small-font-size;
+  .button-vertical-padding(@button-height, @button-small-font-size);
+  padding: @button-vertical-padding (@button-horizontal-padding / 1.5);
+}
+
+.Button--large {
+  font-size: @button-large-font-size;
+  .button-vertical-padding(@button-height, @button-large-font-size);
+  padding: @button-vertical-padding (@button-horizontal-padding / 1.5);
+}
+
+.Button--primary {
+  background-color: @green;
+  color: @white;
+
+  &:hover {
+    color: @white;
+    background-color: @green-lighter;
+  }
+
+  &:active,
+  &:focus {
+    color: @white;
+    background-color: @green-darker;
+  }
+}
+
+.Button--action {
+  background-color: @blue;
+  color: @white;
+
+  &:hover {
+    color: @white;
+    background-color: @blue-lighter;
+  }
+
+  &:active,
+  &:focus {
+    color: @white;
+    background-color: @blue-darker;
+  }
+}
+
+.Button--default {
+  color: @blue;
+  border: 1px solid @gray-lighter;
+
+  &:hover {
+    color: @blue;
+    background-color: @gray-lightest;
+  }
+
+  &:active,
+  &:focus {
+    color: @blue;
+    background-color: darken(@gray-lightest, 2%);
+  }
+}
+
+.Button-price {
+  font-weight: 400;
+}
