@@ -3,6 +3,8 @@ UI Components
 
 > Reusable UI components
 
+Some components depend on `config.less`.
+
 # Components
 
 ## Colors
