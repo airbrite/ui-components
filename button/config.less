@@ -1,0 +1,22 @@
+@button-font-size: 15px;
+@button-small-font-size: @button-font-size - 1px;
+@button-large-font-size: @button-font-size + 3px;
+@button-font-weight: 400;
+
+@button-height: @input-height-base;
+@button-vertical-padding: 15px;
+@button-horizontal-padding: 20px;
+
+@button-rounded-border-radius: 40px;
+@button-sharp-border-radius: @border-radius-base;
+
+@button-transition-timing: 100ms;
+@button-transition-fast-timing: 50ms;
+
+.button-animation(@duration) {
+  transition: background-color @duration cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+
+.button-vertical-padding(@height, @font-size) {
+  @button-vertical-padding: (@height - @font-size) / 2;
+}
