@@ -1,6 +1,6 @@
 {
   "name": "celery-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/airbrite/ui-components",
   "description": "Base styles for Celery",
   "moduleType": [
