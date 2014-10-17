@@ -25,6 +25,7 @@
 
   &:hover {
     .button-animation(@button-transition-timing);
+    text-decoration: none;
   }
 
   &:active {
@@ -40,6 +41,7 @@
   &:focus,
   &:active:focus {
     outline: none;
+    text-decoration: none;
   }
 
   &:last-of-type {
@@ -118,4 +120,14 @@
 
 .Button-price {
   font-weight: 400;
+}
+
+.Button--transparent {
+  background: none;
+  border: 1px solid @white;
+}
+
+.Button--none {
+  .Button--transparent;
+  border: 0;
 }

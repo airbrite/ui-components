@@ -10,11 +10,12 @@
 @button-rounded-border-radius: 40px;
 @button-sharp-border-radius: @border-radius-base;
 
+@button-transition-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
 @button-transition-timing: 100ms;
 @button-transition-fast-timing: 50ms;
 
 .button-animation(@duration) {
-  transition: background-color @duration cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  transition: background-color @duration @button-transition-function;
 }
 
 .button-vertical-padding(@height, @font-size) {
