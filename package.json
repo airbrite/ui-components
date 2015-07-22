@@ -1,0 +1,19 @@
+{
+  "name": "@celery/ui-components",
+  "version": "1.0.0",
+  "description": "Shared UI Components and Styles",
+  "main": "config.less",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airbrite/ui-components.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/airbrite/ui-components/issues"
+  },
+  "homepage": "https://github.com/airbrite/ui-components#readme"
+}
