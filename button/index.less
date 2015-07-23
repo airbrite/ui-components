@@ -16,15 +16,15 @@
   white-space: nowrap;
   appearance: none;
   font-size: @button-font-size;
-  .button-vertical-padding(@button-height, @button-font-size);
+  #celery.button-vertical-padding(@button-height, @button-font-size);
   padding: @button-vertical-padding @button-horizontal-padding;
   line-height: 1;
-  border: 0;
+  border: @button-border;
   border-radius: @button-rounded-border-radius;
-  .button-animation(@button-transition-timing);
+  #celery.button-animation(@button-transition-timing);
 
   &:hover {
-    .button-animation(@button-transition-timing);
+    #celery.button-animation(@button-transition-timing);
     text-decoration: none;
   }
 
@@ -34,7 +34,7 @@
 
   &:active,
   &:focus {
-    .button-animation(@button-transition-fast-timing);
+    #celery.button-animation(@button-transition-fast-timing);
   }
 
   &:active,
@@ -60,51 +60,33 @@
 
 .Button--small {
   font-size: @button-small-font-size;
-  .button-vertical-padding(@button-height, @button-small-font-size);
+  #celery.button-vertical-padding(@button-height, @button-small-font-size);
   padding: @button-vertical-padding (@button-horizontal-padding / 1.5);
 }
 
 .Button--large {
   font-size: @button-large-font-size;
-  .button-vertical-padding(@button-height, @button-large-font-size);
+  #celery.button-vertical-padding(@button-height, @button-large-font-size);
   padding: @button-vertical-padding (@button-horizontal-padding / 1.5);
 }
 
 .Button--primary {
-  background-color: @green;
-  color: @white;
-
-  &:hover {
-    color: @white;
-    background-color: @green-lighter;
-  }
-
-  &:active,
-  &:focus {
-    color: @white;
-    background-color: @green-darker;
-  }
+  #celery.button-color(
+    @button-primary-color,
+    @button-primary-background-color
+  );
 }
 
 .Button--action {
-  background-color: @blue;
-  color: @white;
-
-  &:hover {
-    color: @white;
-    background-color: @blue-lighter;
-  }
-
-  &:active,
-  &:focus {
-    color: @white;
-    background-color: @blue-darker;
-  }
+  #celery.button-color(
+    @button-action-color,
+    @button-action-background-color
+  );
 }
 
 .Button--default {
-  color: @blue;
-  border: 1px solid @gray-lighter;
+  color: @button-default-color;
+  border-color: @button-default-border-color;
 
   &:hover {
     color: @blue;

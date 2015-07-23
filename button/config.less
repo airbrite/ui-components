@@ -7,17 +7,47 @@
 @button-vertical-padding: 15px;
 @button-horizontal-padding: 20px;
 
-@button-rounded-border-radius: 40px;
+@button-border: 1px solid transparent;
+@button-rounded-border-radius: @button-height;
 @button-sharp-border-radius: @border-radius-base;
 
 @button-transition-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
 @button-transition-timing: 100ms;
-@button-transition-fast-timing: 50ms;
+@button-transition-fast-timing: 75ms;
 
-.button-animation(@duration) {
-  transition: background-color @duration @button-transition-function;
-}
+@button-primary-color: @white;
+@button-primary-background-color: @green;
 
-.button-vertical-padding(@height, @font-size) {
-  @button-vertical-padding: (@height - @font-size) / 2;
+@button-action-color: @white;
+@button-action-background-color: @blue;
+
+@button-default-color: @blue
+@button-default-background-color: @white;
+@button-default-border-color: @gray-lighter;
+
+#celery {
+  .button-animation(@duration) {
+    transition: background-color @duration @button-transition-function;
+  }
+
+  .button-vertical-padding(@height, @font-size) {
+    @button-vertical-padding: (@height - @font-size) / 2;
+  }
+
+  .button-color(@color, @background-color) {
+    color: @color;
+    background-color: @background-color;
+    border-color: @background-color;
+
+    &:hover {
+      color: @color;
+      background-color: darken(@background-color, @color-grade-1);
+    }
+
+    &:active,
+    &:focus {
+      color: @color;
+      background-color: brighten(@background-color, @color-grade-1);
+    }
+  }
 }
