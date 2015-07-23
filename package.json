@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/airbrite/ui-components/issues"
   },
-  "homepage": "https://github.com/airbrite/ui-components#readme"
+  "homepage": "https://github.com/airbrite/ui-components#readme",
+  "dependencies": {}
 }
