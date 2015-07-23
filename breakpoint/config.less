@@ -1,0 +1,17 @@
+// Replicate flexboxgrid breakpoints
+// TODO: Help with converting flexboxgrids to LESS
+// https://github.com/kristoferjoseph/flexboxgrid/issues/42
+
+// Usage: @media @sm-viewport { ... }
+
+@sm-min: 48;
+@md-min: 64;
+@lg-min: 75;
+
+@screen-sm-min: unit(@sm-min, em);
+@screen-md-min: unit(@md-min, em);
+@screen-lg-min: unit(@lg-min, em);
+
+@sm-viewport: ~"only screen and (min-width: @{screen-sm-min})";
+@md-viewport: ~"only screen and (min-width: @{screen-md-min})";
+@lg-viewport: ~"only screen and (min-width: @{screen-lg-min})";
