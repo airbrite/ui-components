@@ -1,0 +1,34 @@
+// Use the correct version of an image (*.jpg or *@2x.jpg).
+// Sets the background image since that is the most reliable way to avoid
+// double downloading of resources.
+
+// Remember to configure @CACHEBUST variable in your LESS global variables
+// It's probably best to set it to a version number.
+// If you do not want it, or you are just in Dev, set it manually.
+
+// Configuration
+@hidpi-min-ratio: 1.5;
+@hidpi-suffix: "@2x";
+@cachebust-querystring: "?v=@{CACHEBUST}";
+
+// Mixin
+@dpi-query: ~"(-webkit-min-device-pixel-ratio: @{hidpi-min-ratio})";
+@dppx-query: ~"(min-resolution: @{hidpi-min-ratio}dppx)";
+
+@hidpi-rules: {
+  background-image: url("@{at2x-path}@{cachebust-querystring}");
+};
+
+.hidpi(@path, @w: auto, @h: 100%) {
+  // Set version for cachebusting
+  @fullPath: "@{path}";
+  background-image: url("@{fullPath}@{cachebust-querystring}");
+  background-size: @w @h;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @at2x-path: ~`@{fullPath}.replace(/\.\w+$/, function(match) { return @{hidpi-suffix} + match; })`;
+
+  @media @dpi-query { @hidpi-rules(); }
+  @media @dppx-query { @hidpi-rules(); }
+}

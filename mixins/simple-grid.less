@@ -1,0 +1,75 @@
+// Simple grid system
+// Instead of defining columns per child element, this creates classes that
+// create grids based on the parent class alone. It's somewhat inflexible
+// and requires you to generate classes for every combination of columns.
+
+// Usage
+//
+// .create-simple-grid(1,2,2);
+// Outputs `Grid--1-2-2`.
+
+// <div class="Grid--1-2-2">
+//   <div>a</div>
+//   <div>b</div>
+//   <div>c</div>
+//   <div>d</div>
+// </div>
+
+// At below @screen-md-min width, there is 1 column.
+// a
+// b
+// c
+// d
+
+// At @screen-md-min and @screen-lg-min width, there are two cols.
+// a  b
+// c  d
+
+// Spans
+// .create-simple-span(lg, ~'2-3');
+// .create-simple-span(md, ~'2-3');
+
+#celery {
+  @grid-total-width: 100%;
+
+  .create-simple-grid(@sm-count, @md-count, @lg-count) {
+    .Grid--@{sm}-@{md}-@{lg} > * {
+      @media screen {
+        width: @grid-total-width / @sm-count;
+
+        &:nth-last-child(-1n + @{sm-count}) {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: @screen-md-min) {
+        width: @grid-total-width / @md-count;
+
+        &:nth-last-child(-1n + @{md-count}) {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: @screen-lg-min) {
+        width: @grid-total-width / @lg-count;
+
+        &:nth-last-child(-1n + @{lg-count}) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .create-simple-span(@screen-size, @ratio) {
+    @temp: 'screen-@{screen-size}-min';
+    @size: @@temp;
+    @percentage: ~`"@{ratio}".split('-')[0]/"@{ratio}".split('-')[1]`;
+    @ratio-escaped: escape(@ratio);
+
+    @media screen and (min-width: @size) {
+      .u-@{screen-size}-span-@{ratio} {
+        width: percentage(@percentage);
+      }
+    }
+  }
+}
