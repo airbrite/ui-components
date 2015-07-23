@@ -1,0 +1,84 @@
+// Fancy styled Radio button
+// TODO: Convert magic numbers and refactor
+
+// Usage:
+// <div class="Radio">
+//   <label class="Radio-label single">
+//     <input class="Radio-input"
+//       name="pricing_options"
+//       type="radio"
+//       value="no"/>
+//     <span class="Radio-icon"></span>
+//     <span class="Radio-text">Only one size, color or material</span>
+//   </label>
+// </div>
+
+@import "./config";
+
+.Radio {
+  display:inline-block;
+  height: @radio-size;
+  vertical-align: middle;
+  padding: 0;
+  margin: @radio-margin;
+}
+
+.Radio-label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.Radio-input {
+  display: none;
+}
+
+.Radio-icon {
+  display: inline-block;
+  position: relative;
+  width: @radio-size;
+  height: @radio-size;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 1;
+  background: #fff;
+  // Ensure it appears above other siblings
+  z-index: 2;
+  border: 1px solid @gray-lighter;
+  vertical-align: middle;
+  border-radius: 50%;
+  outline: none;
+}
+
+.Radio-text {
+  color: @blue-darkest;
+  font-size: @radio-text-font-size;
+  line-height: 1;
+  vertical-align: middle;
+  margin-left: @radio-text-margin-left;
+}
+
+.Radio-icon:before,
+.Radio-icon:before {
+  display: block;
+  content:'';
+  position: absolute;
+  right: auto;
+  background: @green;
+  border-radius: 50%;
+  top: @radio-tick-gap;
+  left: @radio-tick-gap;
+  right: @radio-tick-gap;
+  bottom: @radio-tick-gap;
+  transition: opacity @radio-transition-delay ease-in-out;
+  opacity: 0;
+}
+
+.Radio-input:checked ~ .Radio-icon:before,
+.Radio-input:indeterminate ~ .Radio-icon:before {
+  opacity: 1;
+}
+
+.Radio-input:indeterminate ~ .Radio-icon:before {
+  opacity: 0.4;
+}
