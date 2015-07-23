@@ -1,6 +1,6 @@
 {
   "name": "@celery/ui-components",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Shared UI Components and Styles",
   "main": "config.less",
   "scripts": {
