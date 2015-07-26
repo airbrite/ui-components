@@ -9,17 +9,16 @@
 // Configuration
 @hidpi-min-ratio: 1.5;
 @hidpi-suffix: "@2x";
-@cachebust-querystring: "?v=@{CACHEBUST}";
 
 // Mixin
 @dpi-query: ~"(-webkit-min-device-pixel-ratio: @{hidpi-min-ratio})";
 @dppx-query: ~"(min-resolution: @{hidpi-min-ratio}dppx)";
 
-@hidpi-rules: {
-  background-image: url("@{at2x-path}@{cachebust-querystring}");
-};
-
-.hidpi(@path, @w: auto, @h: 100%) {
+.hidpi(@path, @w: auto, @h: 100%, @cachebust) {
+  @cachebust-querystring: "?v=@{CACHEBUST}";
+  @hidpi-rules: {
+    background-image: url("@{at2x-path}@{cachebust-querystring}");
+  };
   // Set version for cachebusting
   @fullPath: "@{path}";
   background-image: url("@{fullPath}@{cachebust-querystring}");
