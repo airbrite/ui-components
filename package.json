@@ -4,7 +4,8 @@
   "description": "Shared UI Components and Styles",
   "main": "config.less",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "broccoli-timepiece build"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,13 @@
     "url": "https://github.com/airbrite/ui-components/issues"
   },
   "homepage": "https://github.com/airbrite/ui-components#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "broccoli": "^0.16.4",
+    "broccoli-cli": "^1.0.0",
+    "broccoli-less-single": "^0.4.0",
+    "broccoli-merge-trees": "^0.2.2",
+    "broccoli-static-compiler": "^0.2.1",
+    "broccoli-timepiece": "^0.3.0"
+  }
 }
