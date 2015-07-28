@@ -4,6 +4,7 @@
 @input-height-base: 40px;
 @input-padding: @grid-gutter-width-half;
 
+@input-color: @blue-darkest;
 @input-background-color: @white;
 
 @input-border-width: 1px;
@@ -12,19 +13,22 @@
 
 @input-font-size-base: @font-size-base;
 
+@input-focus-border-color: @blue-dark;
+
 #celery {
   .input-default() {
     border: @input-border-width solid @input-border-color;
     border-radius: @input-border-radius;
+    font-size: @input-font-size-base;
     height: @input-height-base;
     padding-left: @input-padding;
     padding-right: @input-padding;
+    color: @input-color;
     background-color: @input-background-color;
-    font-size: @input-font-size-base;
 
     &:focus {
       outline: none;
-      border-color: @blue;
+      border-color: @input-focus-border-color;
     }
   }
 }
