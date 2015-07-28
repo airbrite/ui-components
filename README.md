@@ -3,21 +3,43 @@ UI Components
 
 > Reusable UI components
 
-Some components depend on `config.less`.
+## Config vs Index
 
-# Components
+All components come with at least `config.less` and `index.less`. `config.less` includes all the configuration/variables and mixins. `index.less` actually defines the component rulesets or invokes mixins. If you do not want to include the default components, you can just include the config and use that to create your own components based on the variables and mixins.
 
-## Colors
+## Styleguide
 
-Celery colors as variables.
+* `npm run build && npm run styleguide`
+* Open `styleguide/index.html`
 
-## Button
+## Components
 
-Button styles
+* Border
+* Breakpoint
+* Button
+* Color
+* Grid
+* Input
+* Link
+* Logo
+* Radio
+* Select
+* Transition
+* Typography
 
-## Logo
 
-SVG Logo
+## Development
 
-# License
+```
+npm install
+npm run build-watch
+// In another process
+npm run styleguide-watch
+```
+
+This will watch the `components`, `mixins`, and `styleguide` directories. If any of them fail to compile, you have an error.
+
+Don't forget to document things in the comments of the index files. Use [Styledown syntax](https://github.com/styledown/styledown/blob/master/docs/Documenting.md).
+
+## License
 MIT
