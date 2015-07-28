@@ -4,7 +4,7 @@
   "description": "Shared UI Components and Styles",
   "main": "components/index.less",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "rm -rf build && npm run build",
     "build": "broccoli build build",
     "build-watch": "broccoli-timepiece build",
     "styleguide": "styledown components/**/*.less styleguide/config.md > styleguide/index.html",
