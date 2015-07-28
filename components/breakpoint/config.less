@@ -15,3 +15,23 @@
 @sm-viewport: ~"only screen and (min-width: @{screen-sm-min})";
 @md-viewport: ~"only screen and (min-width: @{screen-md-min})";
 @lg-viewport: ~"only screen and (min-width: @{screen-lg-min})";
+
+#celery {
+  .above-sm(@rules) {
+    @media @sm-viewport {
+      @rules();
+    }
+  }
+
+  .above-md(@rules) {
+    @media @md-viewport {
+      @rules();
+    }
+  }
+
+  .above-lg(@rules) {
+    @media @lg-viewport {
+      @rules();
+    }
+  }
+}
