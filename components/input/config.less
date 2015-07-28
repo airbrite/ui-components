@@ -1,1 +1,30 @@
+@import "../border/config";
+@import "../typography/config";
+
 @input-height-base: 40px;
+@input-padding: @grid-gutter-width-half;
+
+@input-background-color: @white;
+
+@input-border-width: 1px;
+@input-border-color: @border-color;
+@input-border-radius: @border-radius-base;
+
+@input-font-size-base: @font-size-base;
+
+#celery {
+  .input-default() {
+    border: @input-border-width solid @input-border-color;
+    border-radius: @input-border-radius;
+    height: @input-height-base;
+    padding-left: @input-padding;
+    padding-right: @input-padding;
+    background-color: @input-background-color;
+    font-size: @input-font-size-base;
+
+    &:focus {
+      outline: none;
+      border-color: @blue;
+    }
+  }
+}

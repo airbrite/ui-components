@@ -27,7 +27,7 @@
 
 @button-default-color: @blue;
 @button-default-background-color: @white;
-@button-default-border-color: @gray-lighter;
+@button-default-border-color: @gray-light;
 
 #celery {
   .button-animation(@duration) {
@@ -51,7 +51,7 @@
     &:active,
     &:focus {
       color: @color;
-      background-color: brighten(@background-color, @color-grade-1);
+      background-color: lighten(@background-color, @color-grade-1);
     }
   }
 }

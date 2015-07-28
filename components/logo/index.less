@@ -1,0 +1,21 @@
+/**
+ * Logo:
+ * `.Logo` Currently does nothing, but you can use `#celery.celery-logo()` mixin
+ * to inject the Celery logo as an SVG background image. Otherwise, the svg is
+ * included in the directory for your own usage in html or stylesheets.
+ *
+ * ```
+ * .Logo--celery {
+ *   #celery.celery-logo;
+ * }
+ * ```
+ *
+ *     @example
+ *     div.Logo.Logo--celery
+ */
+
+ @import "./config";
+
+ .Logo--celery {
+   #celery.celery-logo;
+ }

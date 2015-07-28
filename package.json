@@ -5,7 +5,10 @@
   "main": "config.less",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "broccoli-timepiece build"
+    "build": "broccoli build build",
+    "build-watch": "broccoli-timepiece build",
+    "styleguide": "styledown components/**/*.less styleguide/config.md > styleguide/index.html",
+    "styleguide-watch": "watch 'npm run styleguide' components mixins styleguide --wait=1"
   },
   "repository": {
     "type": "git",
@@ -21,9 +24,11 @@
   "devDependencies": {
     "broccoli": "^0.16.4",
     "broccoli-cli": "^1.0.0",
+    "broccoli-funnel": "^0.2.3",
     "broccoli-less-single": "^0.4.0",
     "broccoli-merge-trees": "^0.2.2",
-    "broccoli-static-compiler": "^0.2.1",
-    "broccoli-timepiece": "^0.3.0"
+    "broccoli-timepiece": "^0.3.0",
+    "styledown": "^1.0.2",
+    "watch": "^0.16.0"
   }
 }

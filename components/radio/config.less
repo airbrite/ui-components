@@ -1,6 +1,10 @@
-@radio-margin: 10px 0 @vertical-gutter-height;
-@radio-size: 20px;
-@radio-tick-gap: 5px;
-@radio-text-font-size: 14px;
-@radio-text-margin-left: 5px;
-@radio-transition-delay: 0.2s;
+@import "../input/config";
+
+@radio-border-color: @input-border-color;
+
+@radio-margin: @grid-gutter-width;
+@radio-size: @grid-gutter-width;
+@radio-tick-gap: @radio-size / 4;
+@radio-text-font-size: @font-size-base;
+@radio-text-margin-left: @radio-size / 4;
+@radio-transition: @transition-base;

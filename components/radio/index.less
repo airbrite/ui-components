@@ -1,26 +1,37 @@
-// Fancy styled Radio button
-// TODO: Convert magic numbers and refactor
-
-// Usage:
-// <div class="Radio">
-//   <label class="Radio-label single">
-//     <input class="Radio-input"
-//       name="pricing_options"
-//       type="radio"
-//       value="no"/>
-//     <span class="Radio-icon"></span>
-//     <span class="Radio-text">Only one size, color or material</span>
-//   </label>
-// </div>
+/**
+ * Radio:
+ * `.Radio` Fancy radio buttons. `.Radio--inline` is probably what you want for
+ * inline radio buttons.
+ * * TODO: Convert magic numbers and refactor
+ *
+ *     @example
+ *     div.Radio.Radio--inline
+ *       label.Radio-label.single
+ *         input.Radio-input(name="pricing_options", type="radio", value="no")
+ *         span.Radio-icon
+ *         span.Radio-text Only one size, color or material
+ *     div.Radio.Radio--inline
+ *       label.Radio-label.single
+ *         input.Radio-input(name="pricing_options", type="radio", value="yes")
+ *         span.Radio-icon
+ *         span.Radio-text Multiple sizes, colors or materials
+ */
 
 @import "./config";
 
 .Radio {
-  display:inline-block;
   height: @radio-size;
   vertical-align: middle;
   padding: 0;
-  margin: @radio-margin;
+  margin-right: @radio-margin;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Radio--inline {
+  display: inline-block;
 }
 
 .Radio-label {
@@ -44,7 +55,7 @@
   background: #fff;
   // Ensure it appears above other siblings
   z-index: 2;
-  border: 1px solid @gray-lighter;
+  border: 1px solid @radio-border-color;
   vertical-align: middle;
   border-radius: 50%;
   outline: none;
@@ -70,7 +81,7 @@
   left: @radio-tick-gap;
   right: @radio-tick-gap;
   bottom: @radio-tick-gap;
-  transition: opacity @radio-transition-delay ease-in-out;
+  transition: opacity @radio-transition;
   opacity: 0;
 }
 

@@ -1,0 +1,303 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>Styledown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./styledown.js"></script>
+  <link rel="stylesheet" href="./styledown.css">
+  <link rel="stylesheet" href="../build/components.css">
+  <link rel="stylesheet" href="../build/app.css">
+</head>
+
+<body class="sg">
+  <h1>Celery Components</h1>
+
+  <div class="sg-container">
+    <section class="sg-block sg-section-borders">
+      <div class="sg-text">
+        <h3 id="borders" class="sg">Borders</h3>
+        <p class="sg">Variables for default border settings.</p>
+        <ul class="sg">
+          <li class="sg">
+            <code class="sg">@border-color</code>
+          </li>
+          <li class="sg">
+            <code class="sg">@border-radius-base</code>
+          </li>
+          <li class="sg">
+            <code class="sg">@border-radius-small</code>
+          </li>
+        </ul>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <div class="example-block default-border"></div>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block default-border&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-button">
+      <div class="sg-text">
+        <h3 id="button" class="sg">Button</h3>
+        <p class="sg">
+          <code class="sg">.Button</code>
+          Buttons are for actions. There are a few variant presets.</p>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <a class="Button Button--default">Default Button</a>
+          <a class="Button Button--primary">Primary Button</a>
+          <a class="Button Button--action">Action Button</a>
+          <a class="Button Button--transparent">Transparent Button</a>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Button Button--default&quot;</span>&gt;</span>Default Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Button Button--primary&quot;</span>&gt;</span>Primary Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Button Button--action&quot;</span>&gt;</span>Action Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Button Button--transparent&quot;</span>&gt;</span>Transparent Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-color">
+      <div class="sg-text">
+        <h3 id="color" class="sg">Color</h3>
+        <p class="sg">All our colors are defined in variables. If you must create a new color that is not defined here, assign it to a variable in your own stylesheet. Consider adding it to the
+          <code class="sg">ui-components</code>if the color can be shared.</p>
+        <p class="sg">
+          <strong class="sg">Note</strong>: For dark grays, just use
+          <code class="sg">.blue-*</code>.</p>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <div class="flex">
+            <div class="color">
+              <div class="example-block green-lightest">@green-lightest</div>
+              <div class="example-block green-lighter">@green-lighter</div>
+              <div class="example-block green-light">@green-light</div>
+              <div class="example-block green">@green</div>
+              <div class="example-block green-dark">@green-dark</div>
+              <div class="example-block green-darker">@green-darker</div>
+              <div class="example-block green-darkest">@green-darkest</div>
+            </div>
+            <div class="color">
+              <div class="example-block blue-lightest">@blue-lightest</div>
+              <div class="example-block blue-lighter">@blue-lighter</div>
+              <div class="example-block blue-light">@blue-light</div>
+              <div class="example-block blue">@blue</div>
+              <div class="example-block blue-dark">@blue-dark</div>
+              <div class="example-block blue-darker">@blue-darker</div>
+              <div class="example-block blue-darkest">@blue-darkest</div>
+            </div>
+            <div class="color">
+              <div class="example-block gray-lightest">@gray-lightest</div>
+              <div class="example-block gray-lighter">@gray-lighter</div>
+              <div class="example-block gray-light">@gray-light</div>
+              <div class="example-block gray">@gray</div>
+              <div class="example-block blue-dark">@blue-dark</div>
+              <div class="example-block blue-darker">@blue-darker</div>
+              <div class="example-block blue-darkest">@blue-darkest</div>
+            </div>
+            <div class="color">
+              <div class="example-block mustard">@mustard</div>
+            </div>
+            <div class="color">
+              <div class="example-block orange">@orange</div>
+            </div>
+          </div>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;flex&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block green-lightest&quot;</span>&gt;</span>@green-lightest<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block green-lighter&quot;</span>&gt;</span>@green-lighter<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block green-light&quot;</span>&gt;</span>@green-light<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block green&quot;</span>&gt;</span>@green<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block green-dark&quot;</span>&gt;</span>@green-dark<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block green-darker&quot;</span>&gt;</span>@green-darker<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block green-darkest&quot;</span>&gt;</span>@green-darkest<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-lightest&quot;</span>&gt;</span>@blue-lightest<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-lighter&quot;</span>&gt;</span>@blue-lighter<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-light&quot;</span>&gt;</span>@blue-light<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue&quot;</span>&gt;</span>@blue<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-dark&quot;</span>&gt;</span>@blue-dark<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-darker&quot;</span>&gt;</span>@blue-darker<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-darkest&quot;</span>&gt;</span>@blue-darkest<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block gray-lightest&quot;</span>&gt;</span>@gray-lightest<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block gray-lighter&quot;</span>&gt;</span>@gray-lighter<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block gray-light&quot;</span>&gt;</span>@gray-light<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block gray&quot;</span>&gt;</span>@gray<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-dark&quot;</span>&gt;</span>@blue-dark<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-darker&quot;</span>&gt;</span>@blue-darker<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block blue-darkest&quot;</span>&gt;</span>@blue-darkest<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block mustard&quot;</span>&gt;</span>@mustard<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;example-block orange&quot;</span>&gt;</span>@orange<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-input">
+      <div class="sg-text">
+        <h3 id="input" class="sg">Input</h3>
+        <ul class="sg">
+          <li class="sg">
+            <code class="sg">#celery.input-default</code>- mixin for input default styles.</li>
+        </ul>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <input type="text" placeholder="Text Input" class="Input">
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Text Input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Input&quot;</span> /&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-link">
+      <div class="sg-text">
+        <h3 id="link" class="sg">Link</h3>
+        <p class="sg">
+          <code class="sg">a</code>- Default color and style of links are set to
+          <code class="sg">@link-color</code>and
+          <code class="sg">@link-hover-color</code>.</p>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <a href="javascript:void(0)">Promo Code</a>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;javascript:void(0)&quot;</span>&gt;</span>Promo Code<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-logo">
+      <div class="sg-text">
+        <h3 id="logo" class="sg">Logo</h3>
+        <p class="sg">
+          <code class="sg">.Logo</code>Currently does nothing, but you can use
+          <code class="sg">#celery.celery-logo()</code>mixin to inject the Celery logo as an SVG background image. Otherwise, the svg is included in the directory for your own usage in html or stylesheets.</p><pre class="sg"><code class="sg">.Logo--celery {
+  #celery.celery-logo;
+}
+</code></pre>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <div class="Logo Logo--celery"></div>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Logo Logo--celery&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-radio">
+      <div class="sg-text">
+        <h3 id="radio" class="sg">Radio</h3>
+        <p class="sg">
+          <code class="sg">.Radio</code>Fancy radio buttons.
+          <code class="sg">.Radio--inline</code>is probably what you want for inline radio buttons.</p>
+        <ul class="sg">
+          <li class="sg">TODO: Convert magic numbers and refactor</li>
+        </ul>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <div class="Radio Radio--inline">
+            <label class="Radio-label single">
+              <input name="pricing_options" type="radio" value="no" class="Radio-input">
+              <span class="Radio-icon"></span>
+              <span class="Radio-text">Only one size, color or material</span>
+            </label>
+          </div>
+          <div class="Radio Radio--inline">
+            <label class="Radio-label single">
+              <input name="pricing_options" type="radio" value="yes" class="Radio-input">
+              <span class="Radio-icon"></span>
+              <span class="Radio-text">Multiple sizes, colors or materials</span>
+            </label>
+          </div>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio Radio--inline&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-label single&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;pricing_options&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;no&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-icon&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-text&quot;</span>&gt;</span>Only one size, color or material<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio Radio--inline&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-label single&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;pricing_options&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;yes&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-icon&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Radio-text&quot;</span>&gt;</span>Multiple sizes, colors or materials<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-select">
+      <div class="sg-text">
+        <h3 id="select" class="sg">Select</h3>
+        <p class="sg">
+          <code class="sg">.Select</code>Pretty much the same as an input, but with blue text!</p>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <select class="Select">
+            <option>Wombat</option>
+            <option>Shiba</option>
+            <option>Cat</option>
+          </select>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;Select&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Wombat<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Shiba<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Cat<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span></pre>
+      </div>
+    </section>
+
+    <section class="sg-block sg-section-transition">
+      <div class="sg-text">
+        <h3 id="transition" class="sg">Transition</h3>
+        <p class="sg">Variables for default transition properties.</p>
+        <ul class="sg">
+          <li class="sg">
+            <code class="sg">@transition-timing-base</code>
+          </li>
+          <li class="sg">
+            <code class="sg">@transition-easing-base</code>
+          </li>
+          <li class="sg">
+            <code class="sg">@transition-base</code>
+          </li>
+        </ul>
+      </div><pre class="sg sg-lang-css sg-code"><span class="hljs-tag">a</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> color @transition-base</span></span>;
+<span class="hljs-rule">}</span></span>
+</pre>
+    </section>
+
+    <section class="sg-block sg-section-typography">
+      <div class="sg-text">
+        <h3 id="typography" class="sg">Typography</h3>
+        <p class="sg">Sets
+          <code class="sg">html</code>and
+          <code class="sg">body</code>
+          <code class="sg">font-size</code>and
+          <code class="sg">font-family</code>. It is recommended to also set
+          <code class="sg">body</code>
+          <code class="sg">color</code>to
+          <code class="sg">@font-color-base</code>;</p>
+      </div>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <p>Default font-family (`@font-family-sans-serif`).</p>
+          <p class="serif">Serif font-family (`@font-family-serif`).</p>
+          <p class="monospace">Mono font-family (`@font-family-monospace`).</p>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Default font-family (`@font-family-sans-serif`).<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;serif&quot;</span>&gt;</span>Serif font-family (`@font-family-serif`).<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;monospace&quot;</span>&gt;</span>Mono font-family (`@font-family-monospace`).<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>

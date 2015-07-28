@@ -1,0 +1,121 @@
+@import "../components/index";
+
+body.sg {
+  padding: @grid-gutter-width-large;
+}
+
+// Styleguide specific styles for examples
+
+.example-block {
+  height: @grid-gutter-width-large;
+  width: @grid-gutter-width-large;
+  transition: all 0.15s ease-in-out;
+}
+
+.default-border {
+  border: 1px solid @border-color;
+  border-radius: @border-radius-base;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// Color
+
+.color {
+  display: flex;
+  flex: 1 0 auto;
+  margin: @grid-gutter-width;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 130px;
+  color: fadeout(@white, 70%);
+  line-height: @grid-gutter-width-large;
+
+  .example-block {
+    width: auto;
+    padding: 0 @grid-gutter-width;
+
+    &:hover {
+      color: @white;
+    }
+  }
+}
+
+.gray-light {
+  background-color: @gray-light;
+}
+
+.gray-lighter {
+  background-color: @gray-lighter;
+}
+
+.gray-light,
+.gray-lighter {
+  color: fadeout(@blue-dark, 70%);
+
+  .color &:hover {
+    color: @blue-dark;
+  }
+}
+
+@colors: green, blue, gray, mustard, orange;
+@color-variants: green, blue;
+
+.generate-color-blocks(@counter: 1) when (@counter =< length(@colors)) {
+  .generate-color-blocks(@counter + 1);
+
+  @color: extract(@colors, @counter);
+
+  .@{color} {
+    background-color: @@color;
+  }
+}
+
+.generate-color-variant-blocks(@counter: 1)
+  when (@counter =< length(@color-variants)) {
+
+  .generate-color-variant-blocks(@counter + 1);
+
+  @color: extract(@color-variants, @counter);
+  @suffixes: light, lighter, lightest, dark, darker, darkest;
+
+  .generate-color-variants(@v-counter: 1)
+    when (@v-counter =< length(@suffixes)) {
+
+    .generate-color-variants(@v-counter + 1);
+
+    @suffix: extract(@suffixes, @v-counter);
+    @color-variant: ~'@{color}-@{suffix}';
+    .@{color-variant} {
+      background-color: @@color-variant;
+    }
+  }
+
+  .generate-color-variants();
+}
+
+.generate-color-blocks();
+.generate-color-variant-blocks();
+
+// Logo
+
+.Logo--celery {
+  width: 250px;
+  height: 120px;
+  background-color: @green;
+  background-size: 200px;
+}
+
+// Typography
+
+.serif {
+  font-family: @font-family-serif;
+}
+
+.monospace {
+  font-family: @font-family-monospace;
+}
