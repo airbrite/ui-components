@@ -30,10 +30,10 @@
   line-height: 1;
   border: @button-border;
   border-radius: @button-rounded-border-radius;
-  #celery.button-animation(@button-transition-timing);
+  #celery.button-animation(@button-transition-duration);
 
   &:hover {
-    #celery.button-animation(@button-transition-timing);
+    #celery.button-animation(@button-transition-duration);
     text-decoration: none;
   }
 
@@ -43,7 +43,7 @@
 
   &:active,
   &:focus {
-    #celery.button-animation(@button-transition-fast-timing);
+    #celery.button-animation(@button-transition-fast-duration);
   }
 
   &:active,

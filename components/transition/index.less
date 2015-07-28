@@ -2,8 +2,8 @@
  * Transition:
  * Variables for default transition properties.
  *
+ * * `@transition-duration-base`
  * * `@transition-timing-base`
- * * `@transition-easing-base`
  * * `@transition-base`
  *
  *     a {
@@ -12,3 +12,14 @@
  */
 
 @import "./config";
+
+#celery {
+  .transition(
+    @properties;
+    @duration: @transition-duration-base;
+    @timing: @transition-timing-base) {
+      transition-property: @properties;
+      transition-duration: @duration;
+      transition-timing-function: @timing;
+  }
+}

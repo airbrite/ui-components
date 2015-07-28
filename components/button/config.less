@@ -15,9 +15,9 @@
 @button-rounded-border-radius: @button-height;
 @button-sharp-border-radius: @border-radius-base;
 
-@button-transition-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
-@button-transition-timing: 100ms;
-@button-transition-fast-timing: 75ms;
+@button-transition-timing: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+@button-transition-duration: 0.15s;
+@button-transition-fast-duration: 0.1s;
 
 @button-primary-color: @white;
 @button-primary-background-color: @green;
@@ -31,7 +31,7 @@
 
 #celery {
   .button-animation(@duration) {
-    transition: background-color @duration @button-transition-function;
+    transition: background-color @duration @button-transition-timing;
   }
 
   .button-vertical-padding(@height, @font-size) {
