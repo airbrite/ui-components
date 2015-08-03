@@ -5,6 +5,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <script src='./styledown.js'></script>
     <link rel='stylesheet' href='../node_modules/normalize.css/normalize.css' />
+    <link rel='stylesheet' href='../node_modules/flexboxgrid/dist/flexboxgrid.css' />
     <link rel='stylesheet' href='./styledown.css' />
     <link rel='stylesheet' href='../build/components.css' />
     <link rel='stylesheet' href='../build/app.css' />

@@ -4,17 +4,34 @@
  * Buttons are for actions. There are a few variant presets.
  *
  *     @example
- *     a.Button.Button--default Default Button
- *     a.Button.Button--primary Primary Button
- *     a.Button.Button--action Action Button
- *     a.Button.Button--transparent Transparent Button
+ *     .row
+ *       .col-xs
+ *         a.Button.Button--default Default Button
+ *       .col-xs
+ *         a.Button.Button--primary Primary Button
+ *       .col-xs
+ *         a.Button.Button--action Action Button
+ *       .col-xs
+ *         a.Button.Button--transparent Transparent Button
+ *     .row
+ *       .col-xs
+ *         a.Button.Button--small.Button--primary Small
+ *       .col-xs
+ *         a.Button.Button--large.Button--primary Large
+ *       .col-xs
+ *         a.Button.Button--sharp.Button--primary Sharp
  */
 
 @import "./config";
 
 .Button {
   display: inline-block;
+  border: @button-border;
+  border-radius: @button-rounded-border-radius;
+  padding: @button-vertical-padding @button-horizontal-padding;
+  font-size: @button-font-size;
   font-weight: @button-font-weight;
+  line-height: 1;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -24,12 +41,7 @@
   background-image: none;
   white-space: nowrap;
   appearance: none;
-  font-size: @button-font-size;
   #celery.button-vertical-padding(@button-height, @button-font-size);
-  padding: @button-vertical-padding @button-horizontal-padding;
-  line-height: 1;
-  border: @button-border;
-  border-radius: @button-rounded-border-radius;
   #celery.button-animation(@button-transition-duration);
 
   &:hover {
