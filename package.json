@@ -28,6 +28,7 @@
     "broccoli-less-single": "^0.4.0",
     "broccoli-merge-trees": "^0.2.2",
     "broccoli-timepiece": "^0.3.0",
+    "normalize.css": "^3.0.3",
     "styledown": "^1.0.2",
     "watch": "^0.16.0"
   }
