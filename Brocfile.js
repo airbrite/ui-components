@@ -12,7 +12,11 @@ var mixins = funnel('mixins', {
   include: ['**/*.less']
 });
 
-var componentsLess = compileLess([components, 'styleguide'], 'index.less', 'components.css', {
+var styleguide = funnel('styleguide', {
+  include: ['**/*.less']
+});
+
+var componentsLess = compileLess([components], 'index.less', 'components.css', {
     paths: ['.']
 });
 
@@ -20,7 +24,7 @@ var mixinsLess = compileLess([mixins], 'index.less', 'mixins.css', {
     paths: ['.']
 });
 
-var styleguideLess = compileLess([components, 'styleguide'], 'app.less', 'app.css', {
+var styleguideLess = compileLess([components, styleguide], 'app.less', 'app.css', {
   paths: ['.']
 });
 
