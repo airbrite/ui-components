@@ -9,21 +9,6 @@ UI Components
 * `npm run build && npm run styleguide`
 * Open `styleguide/index.html` in browser
 
-## Components
-
-* Border
-* Breakpoint
-* Button
-* Color
-* Grid
-* Input
-* Link
-* Logo
-* Radio
-* Select
-* Transition
-* Typography
-
 ## Usage
 
 You must be an approved npm user for the `@celery` namespace/private modules.
