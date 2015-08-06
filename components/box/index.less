@@ -1,0 +1,23 @@
+/**
+ * Box:
+ * `.Box` is a generic box with margin. Useful for spacing out nested grids.
+ *
+ *     @example
+ *     .row
+ *       .col-xs-6.default-border
+ *         .Box
+ *           .row
+ *             .col-xs-6.default-border Wombat
+ *             .col-xs-6.default-border Koala
+ *       .col-xs-6.default-border
+ *         .Box
+ *           .row
+ *             .col-xs-6.default-border Shiba
+ *             .col-xs-6.default-border Bear
+ */
+
+@import "./config";
+
+.Box {
+  margin: @box-margin;
+}
