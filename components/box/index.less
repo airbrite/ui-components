@@ -1,6 +1,8 @@
 /**
  * Box:
  * `.Box` is a generic box with margin. Useful for spacing out nested grids.
+ * `.Box--container` is a box with no padding, useful for adding borders above
+ * or below columns since the first and last columns bleed out of the row.
  *
  *     @example
  *     .row
@@ -20,4 +22,8 @@
 
 .Box {
   padding: @box-padding;
+}
+
+.Box--container {
+  padding: 0;
 }
