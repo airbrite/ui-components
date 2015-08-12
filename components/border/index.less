@@ -4,9 +4,18 @@
  * * `@border-color`
  * * `@border-radius-base`
  * * `@border-radius-small`
+ * * `#celery.default-border`
  *
  *     @example
+ *     // .default-border uses #celery.default-border
  *     div.example-block.default-border
  */
 
 @import "./config";
+
+#celery {
+  .default-border {
+    border: 1px solid @border-color;
+    border-radius: @border-radius-base;
+  }
+}
