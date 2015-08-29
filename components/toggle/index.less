@@ -1,0 +1,129 @@
+@import "./config";
+
+/**
+ * Toggle:
+ * `.Toggle`: Toggle input, usually used for setting enable/disable settings
+ *
+ *     @example
+ *     .Toggle
+ *       label.Toggle-label
+ *         .Toggle-control
+ *           input.Toggle-input(type="checkbox")
+ *           i.Toggle-background
+ *           i.Toggle-switch
+ *         span.Toggle-labelText Label
+ *         span.Toggle-status On
+ */
+
+.Toggle {
+  position: relative;
+}
+
+.Toggle--inline {
+  display: inline-block;
+  // height: @toggle-height;
+}
+
+.Toggle-label {
+  font-weight: normal;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.Toggle-labelText {
+  font-family: @toggle-label-font-family;
+  font-size: @toggle-label-font-size;
+  color: @blue-darker;
+  line-height: 1;
+}
+
+// TODO: Deprecate
+.Toggle-heading-image {
+  height: @toggle-heading-image-height;
+  width: auto;
+}
+
+.Toggle-control {
+  cursor: pointer;
+  vertical-align: middle;
+  height: @toggle-height;
+  width: @toggle-width;
+  margin-right: 0;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: @toggle-height / -2;
+}
+
+.Toggle-input {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  height: @toggle-height;
+  width: @toggle-width;
+}
+
+.Toggle-background {
+  height: @toggle-height;
+  width: @toggle-width;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  background-color: @gray-light;
+  border-radius: (@toggle-height/2);
+  transition: background-color @toggle-transition-duration linear;
+}
+
+.Toggle-switch {
+  height: @toggle-height - (@toggle-switch-gap * 2);
+  width: @toggle-height - (@toggle-switch-gap * 2);
+  position: absolute;
+  left: @toggle-switch-gap;
+  top: @toggle-switch-gap;
+  border-radius: 50%;
+  background-color: @white;
+  transition: left @toggle-transition-duration linear;
+}
+
+.Toggle-input:checked ~ .Toggle-background {
+  background-color: @green;
+}
+
+.Toggle-input:disabled ~ .Toggle-background {
+  background-color: @gray-light;
+}
+
+// Disabled inputs doesn't fire events. By hidding the disabled input the
+// container is able to capture mouse events.
+.Toggle-input[type="checkbox"][disabled] {
+  display: none;
+}
+
+.Toggle-input:checked ~ .Toggle-switch {
+  left: (@toggle-width - (@toggle-height - @toggle-switch-gap));
+}
+
+.Toggle-status {
+  font-size: @toggle-status-font-size;
+  position: absolute;
+  right: @toggle-width + @toggle-status-margin;
+  top: 50%;
+  margin-top: (@toggle-height/-2);
+  height: @toggle-height;
+  line-height: @toggle-height;
+}
+
+.Toggle.is-on {
+  .Toggle-status {
+    color: @green-light;
+  }
+}
+
+.Toggle.is-off {
+  .Toggle-status {
+    color: @gray-light;
+  }
+}
