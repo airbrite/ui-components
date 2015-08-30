@@ -1,5 +1,3 @@
-// Smoke test to make sure the LESS compiles correctly
-
 var funnel = require('broccoli-funnel');
 var mergeTrees = require('broccoli-merge-trees');
 var compileLess = require('broccoli-less-single');

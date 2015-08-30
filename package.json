@@ -5,10 +5,9 @@
   "main": "components/index.less",
   "scripts": {
     "test": "npm run build",
-    "build": "rm -rf build && broccoli build build",
+    "build": "rm -rf build && broccoli build build && npm run styleguide",
     "build-watch": "broccoli-timepiece build",
-    "styleguide": "styledown components/**/*.less styleguide/config.md > styleguide/index.html",
-    "styleguide-watch": "watch 'npm run styleguide' components mixins styleguide --wait=1"
+    "styleguide": "styledown components/**/*.less styleguide/config.md > styleguide/index.html"
   },
   "repository": {
     "type": "git",
