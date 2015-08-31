@@ -37,6 +37,34 @@
 }
 
 /**
+ * Bordered Table:
+ * `.Table--bordered`: Add a border to it.
+ *
+ *     @example
+ *     table.Table.Table--bordered
+ *       thead.Table-header
+ *         tr.Table-row
+ *           th.Table-headerCell Animal
+ *           th.Table-headerCell Color
+ *       tbody
+ *         tr.Table-row
+ *           td.Table-cell Wombat
+ *           td.Table-cell Brown
+ *         tr.Table-row
+ *           td.Table-cell Dog
+ *           td.Table-cell Orange
+ */
+
+.Table--bordered {
+  border: @table-border;
+  overflow: hidden;
+
+  .Table-row {
+    border-bottom: @table-border;
+  }
+}
+
+/**
  * Compact Table:
  * `.Table--compact`: Will attempt to set all `.Table-headerCell` and
  * `.Table-cell` children to inherit their `--compact` variants.
@@ -70,12 +98,35 @@
   }
 }
 
-.Table--bordered {
-  border: @table-border;
-  overflow: hidden;
+/**
+ * Flush Table:
+ * `.Table--flush`: Remove left padding from first cells, remove right padding
+ * from last cells. Usually combined with `.Table--compact`.
+ *
+ *     @example
+ *     table.Table.Table--flush.Table--compact
+ *       thead.Table-header
+ *         tr.Table-row
+ *           th.Table-headerCell Animal
+ *           th.Table-headerCell.Table-headerCell--number Price
+ *       tbody
+ *         tr.Table-row
+ *           td.Table-cell Wombat
+ *           td.Table-cell.Table-cell--number $74.21
+ *         tr.Table-row
+ *           td.Table-cell Dog
+ *           td.Table-cell.Table-cell--number $12.21
+ */
 
-  .Table-row {
-    border-bottom: @table-border;
+.Table--flush {
+  th:first-child,
+  td:first-child {
+    padding-left: 0;
+  }
+
+  th:last-child,
+  td:last-child {
+    padding-right: 0;
   }
 }
 
