@@ -1,0 +1,69 @@
+/**
+ * Panel:
+ * `.Panel`: Generic panels are blocks of content that are chunked.
+ * eg. A standalone chart or metric, a preview, etc
+ *
+ *     @example
+ *     .Panel
+ *       header.Panel-header
+ *         h1.Panel-heading Panel Heading
+ *       .Panel-body
+ *         p Panel body
+ *       .Panel-footer
+ *         a Panel Footer
+ */
+
+@import "./config";
+@import "../border/index";
+
+.Panel {
+  #celery.default-border;
+  margin-bottom: @panel-margin;
+}
+
+.Panel--inline {
+  display: inline-block;
+}
+
+.Panel-header {
+  padding: @panel-gutter-size;
+  border-bottom: @border-base;
+}
+
+.Panel-heading {
+  font-size: @panel-heading-font-size;
+  line-height: @panel-heading-line-height;
+  color: @panel-heading-color;
+  margin: 0;
+}
+
+.Panel-headingIcon {
+  margin-right: @grid-gutter-width;
+}
+
+.Panel-heading--small {
+  font-size: @panel-heading-small-font-size;
+  text-transform: uppercase;
+}
+
+.Panel-heading--light {
+  color: @panel-heading-color-light;
+}
+
+.Panel-header--divisor {
+  border-top: 1px solid @input-border-color;
+  margin-top: @panel-gutter-size;
+}
+
+.Panel-body {
+  padding: @panel-gutter-size;
+
+  & + & {
+    border-top: @border-base;
+  }
+}
+
+.Panel-footer {
+  border-top: 1px solid @input-border-color;
+  padding: @panel-gutter-size;
+}
