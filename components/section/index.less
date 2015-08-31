@@ -1,0 +1,36 @@
+/**
+ * Section:
+ * `.Section`: Generic section for content. Usually paired with a `.Panel` or
+ * in other component. Sometimes used for standalone header/text.
+ *
+ *     @example
+ *     .Section
+ *       .Section-header
+ *         h1.Section-heading Section Heading
+ *       .Section-body
+ *         p Celery gives you all the tools you need for advance sales, customer and order management. We grow with you through every stage of your business.
+ */
+
+@import "./config";
+
+.Section {
+  margin-bottom: @section-margin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Section-header {
+  &:extend(.u-cf all);
+  margin-bottom: @section-header-margin;
+}
+
+.Section-heading {
+  font-size: @section-heading-font-size;
+  color: @section-heading-color;
+}
+
+.Section-heading--inline {
+  .Header-heading--inline;
+}

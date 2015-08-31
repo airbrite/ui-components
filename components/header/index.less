@@ -1,0 +1,40 @@
+/**
+ * Header:
+ * `.Header`: Generic header component
+ *
+ *     @example
+ *     .Header
+ *       h1.Header-heading Heading
+ *       h1.Header-subheading Subheading
+ */
+
+@import "./config";
+
+.Header {
+  margin-bottom: @header-margin;
+  line-height: 1;
+
+  *:not([style="display: none;"]) + & {
+    margin-top: @header-margin;
+  }
+}
+
+.Header-heading {
+  margin: 0;
+  font-size: @header-heading-font-size;
+}
+
+.Header-heading--inline,
+.Header-subheading--inline {
+  display: inline-block;
+}
+
+.Header-subheading {
+  margin: @header-heading-margin 0 0;
+  font-size: @header-subheading-font-size;
+  color: @header-subheading-color;
+}
+
+.Header--page {
+  &:extend(.u-cf all);
+}
