@@ -5,14 +5,25 @@
  * `.Toggle`: Toggle input, usually used for setting enable/disable settings
  *
  *     @example
- *     .Toggle
- *       label.Toggle-label
- *         .Toggle-control
- *           input.Toggle-input(type="checkbox")
- *           i.Toggle-background
- *           i.Toggle-switch
- *         span.Toggle-labelText Label
- *         span.Toggle-status On
+ *     .Box
+ *       .Toggle.is-off
+ *         label.Toggle-label
+ *           .Toggle-control
+ *             input.Toggle-input(type="checkbox")
+ *             i.Toggle-background
+ *             i.Toggle-switch
+ *           span.Toggle-labelText Fan
+ *           span.Toggle-status Off
+ *
+ *     .Box
+ *       .Toggle.is-on
+ *         label.Toggle-label
+ *           .Toggle-control
+ *             input.Toggle-input(type="checkbox" checked)
+ *             i.Toggle-background
+ *             i.Toggle-switch
+ *           span.Toggle-labelText Oven
+ *           span.Toggle-status On
  */
 
 .Toggle {
