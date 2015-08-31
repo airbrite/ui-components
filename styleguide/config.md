@@ -12,10 +12,10 @@
 
 ### Body
 
-    <h1>Celery Components</h1>
+    h1 Celery Components
 
-    <h2>Requirements</h2>
+    h2 Requirements
 
-    <p>All components assume usage of <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a> and the <a href="#border-box-reset">Border Box Reset</a>.</p>
+    p All components assume usage of <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>&nbsp;and the <a href="#border-box-reset">Border Box Reset</a>.
 
-    <div class='sg-container' sg-content></div>
+    .sg-container(sg-content)
