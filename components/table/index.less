@@ -1,0 +1,133 @@
+/**
+ * Table:
+ * `.Table`: For showing tabular data.
+ *
+ *     @example
+ *     table.Table
+ *       thead.Table-header
+ *         tr.Table-row
+ *           th.Table-headerCell Animal
+ *           th.Table-headerCell Color
+ *       tbody.Table-body
+ *         tr.Table-row
+ *           td.Table-cell Wombat
+ *           td.Table-cell Brown
+ *         tr.Table-row
+ *           td.Table-cell Dog
+ *           td.Table-cell Orange
+ */
+
+@import "./config";
+@import "../../util/typography";
+
+.Table {
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  &:not(:last-child) {
+    margin-bottom: @table-margin-bottom;
+  }
+
+  &.is-disabled {
+    opacity: @table-disabled-opacity;
+    pointer-events: none;
+  }
+}
+
+/**
+ * Compact Table:
+ * `.Table--compact`: Will attempt to set all `.Table-headerCell` and
+ * `.Table-cell` children to inherit their `--compact` variants.
+ *
+ *     @example
+ *     table.Table.Table--compact
+ *       thead.Table-header
+ *         tr.Table-row
+ *           th.Table-headerCell Animal
+ *           th.Table-headerCell Color
+ *       tbody
+ *         tr.Table-row
+ *           td.Table-cell Wombat
+ *           td.Table-cell Brown
+ *         tr.Table-row
+ *           td.Table-cell Dog
+ *           td.Table-cell Orange
+ */
+
+.Table--compact {
+  .Table-header {
+    &:extend(.Table-header--compact);
+  }
+
+  .Table-headerCell {
+    &:extend(.Table-headerCell--compact);
+  }
+
+  .Table-cell {
+    &:extend(.Table-cell--compact);
+  }
+}
+
+.Table--bordered {
+  border: @table-border;
+  overflow: hidden;
+
+  .Table-row {
+    border-bottom: @table-border;
+  }
+}
+
+.Table-row {}
+
+.Table-header {
+  background-color: @table-header-background-color;
+
+  .Table-headerCell {
+    padding: @table-header-padding;
+  }
+}
+
+.Table-header--compact {
+  background: transparent;
+  border-bottom: @table-border;
+}
+
+.Table-headerCell--compact {
+  &:extend(.Table-cell--compact);
+  font-size: @table-cell-font-size;
+  height: auto;
+}
+
+.Table-cell {
+  font-size: @table-cell-font-size;
+  padding: @table-cell-padding;
+  vertical-align: middle;
+}
+
+.Table-cell--compact {
+  padding: @table-cell-compact-padding;
+}
+
+.Table-cell--number {
+  .u-number;
+  text-align: right;
+}
+
+.Table-cell--expand {
+  width: 100%;
+}
+
+.Table-headerCell {
+  &:extend(.Table-cell all);
+  height: @table-header-height;
+  padding: @table-cell-padding;
+  font-size: @table-header-font-size;
+  font-weight: @table-header-font-weight;
+  text-align: left;
+}
+
+.Table-headerCell--number {
+  text-align: right;
+}
