@@ -6,8 +6,8 @@ UI Components
 ## Styleguide
 
 * `npm install`
-* `npm run build && npm run styleguide`
-* Open `styleguide/index.html` in browser
+* `npm run build`
+* Open `build/index.html` in browser
 
 ## Usage
 
@@ -26,13 +26,11 @@ All components come with at least `config.less` and `index.less`. `config.less` 
 ```
 npm install
 npm run build-watch
-// In another process
-npm run styleguide-watch
 ```
 
 This will watch the `components`, `mixins`, and `styleguide` directories. If any of them fail to compile, you have an error.
 
-Open the styleguide by opening `styleguide/index.html` in your browser.
+Open the styleguide by opening `build/index.html` in your browser.
 
 Don't forget to document things in the comments of the index files. Use [Styledown syntax](https://github.com/styledown/styledown/blob/master/docs/Documenting.md).
 

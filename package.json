@@ -5,9 +5,8 @@
   "main": "components/index.less",
   "scripts": {
     "test": "npm run build",
-    "build": "rm -rf build && broccoli build build && npm run styleguide",
-    "build-watch": "broccoli-timepiece build",
-    "styleguide": "styledown components/**/*.less styleguide/config.md > styleguide/index.html"
+    "build": "rm -rf build && broccoli build build",
+    "build-watch": "broccoli-timepiece build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
     "broccoli-funnel": "^0.2.3",
     "broccoli-less-single": "^0.4.0",
     "broccoli-merge-trees": "^0.2.2",
+    "broccoli-styledown": "^0.1.0",
     "broccoli-timepiece": "^0.3.0",
     "flexboxgrid": "^6.2.0",
     "normalize.css": "^3.0.3",
