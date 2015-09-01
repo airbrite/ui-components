@@ -1,0 +1,22 @@
+/**
+ * Form:
+ * Currently, the only style we add to forms is to the child `.Form-group`,
+ * which just adds some bottom margin.
+ *
+ *     @example
+ *     form.Form
+ *       .Form-group
+ *         label.Label Name
+ *         input.Input.Input--text(value="Wally")
+ *       .Form-group
+ *         label.Label Email
+ *         input.Input.Input--email(value="wally@wombat.com")
+ */
+
+@import "./config";
+
+.Form {}
+
+.Form-group {
+  margin-bottom: @form-group-margin;
+}

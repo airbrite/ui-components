@@ -1,0 +1,22 @@
+/**
+ * Label:
+ * `.Label`: A form label.
+ *
+ *     @example
+ *     .Label Name
+ *     input.Input.Input--text(placeholder="Name", value="Wally")
+ */
+
+@import "./config";
+
+.Label {
+  display: block;
+  margin-bottom: @label-margin-bottom;
+  font-size: @label-font-size;
+  font-weight: normal;
+  color: @label-font-color;
+}
+
+.Label--inline {
+  display: inline-block;
+}
