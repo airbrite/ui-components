@@ -19,6 +19,7 @@
 
 @import "./config";
 @import "../../util/typography";
+@import "../../util/layout";
 
 .Table {
   width: 100%;
@@ -166,8 +167,8 @@
   text-align: right;
 }
 
-.Table-cell--expand {
-  width: 100%;
+.Table-cell--expanded {
+  .u-expand;
 }
 
 .Table-headerCell {
