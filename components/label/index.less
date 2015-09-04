@@ -3,11 +3,12 @@
  * `.Label`: A form label.
  *
  *     @example
- *     .Label Name
+ *     .Label Name <span class="Label-optional">(optional)</span>
  *     input.Input.Input--text(placeholder="Name", value="Wally")
  */
 
 @import "./config";
+@import "../text/index";
 
 .Label {
   display: block;
@@ -19,4 +20,10 @@
 
 .Label--inline {
   display: inline-block;
+}
+
+// Optional text. (optional)
+.Label-optional {
+  font-size: @label-optional-font-size;
+  .text-muted;
 }
