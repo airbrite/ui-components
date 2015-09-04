@@ -55,16 +55,12 @@
 }
 
 .Toggle-control {
+  display: inline;
+  float:right;
   cursor: pointer;
-  vertical-align: middle;
   height: @toggle-height;
   width: @toggle-width;
   margin-right: 0;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: @toggle-height / -2;
 }
 
 .Toggle-input {
@@ -80,7 +76,7 @@
   height: @toggle-height;
   width: @toggle-width;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   display: block;
   background-color: @gray-light;
@@ -92,11 +88,11 @@
   height: @toggle-height - (@toggle-switch-gap * 2);
   width: @toggle-height - (@toggle-switch-gap * 2);
   position: absolute;
-  left: @toggle-switch-gap;
+  right: @toggle-switch-gap;
   top: @toggle-switch-gap;
   border-radius: 50%;
   background-color: @white;
-  transition: left @toggle-transition-duration linear;
+  transition: right @toggle-transition-duration linear;
 }
 
 .Toggle-input:checked ~ .Toggle-background {
@@ -114,15 +110,13 @@
 }
 
 .Toggle-input:checked ~ .Toggle-switch {
-  left: (@toggle-width - (@toggle-height - @toggle-switch-gap));
+  right: (@toggle-width - (@toggle-height - @toggle-switch-gap));
 }
 
 .Toggle-status {
+  float: right;
+  margin-right: 10px;
   font-size: @toggle-status-font-size;
-  position: absolute;
-  right: @toggle-width + @toggle-status-margin;
-  top: 50%;
-  margin-top: (@toggle-height/-2);
   height: @toggle-height;
   line-height: @toggle-height;
 }
