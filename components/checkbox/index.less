@@ -1,0 +1,86 @@
+/**
+ * Checkbox:
+ * `.Checkbox`: Fancy checkbox
+ *
+ *     @example
+ *     .Checkbox
+ *       label.Checkbox-label
+ *         input.Checkbox-input(type="checkbox")
+ *         span.Checkbox-icon
+ *       span.Checkbox-text Free Shipping
+ */
+
+@import "./config";
+
+.Checkbox {
+  display: inline-block;
+  font-size: @checkbox-text-font-size;
+  height: @checkbox-size;
+  vertical-align: middle;
+  padding: 0;
+  margin-top: @checkbox-icon-top;
+  margin-bottom: @checkbox-margin-bottom;
+  line-height: 1;
+}
+
+.Checkbox--noMargin {
+  margin-bottom: 0;
+}
+
+.Checkbox-label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.Checkbox-input {
+  display: none;
+}
+
+.Checkbox-icon {
+  display: inline-block;
+  position: relative;
+  width: @checkbox-size;
+  height: @checkbox-size;
+  margin:0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 1;
+  background: #fff;
+  z-index: 2;
+  #celery.default-border;
+  border-radius: @checkbox-border-radius;
+  vertical-align: middle;
+  outline: none;
+}
+
+.Checkbox-text {
+  color: @blue-darkest;
+  font-size: @checkbox-text-font-size;
+  line-height: 1;
+  vertical-align: middle;
+  margin-left: @checkbox-text-margin-left;
+}
+
+.Checkbox-icon:before {
+  display: block;
+  content: '';
+  position: absolute;
+  right: auto;
+  background-image: @checkbox-icon-background;
+  background-repeat: no-repeat;
+  top: @checkbox-icon-top;
+  left: @checkbox-icon-left;
+  width: 70%;
+  height: 70%;
+  transition: opacity 0.1s ease-in-out;
+  opacity: 0;
+}
+
+.Checkbox-input:checked ~ .Checkbox-icon:before,
+.Checkbox-input:indeterminate ~ .Checkbox-icon:before {
+  opacity: 1;
+}
+
+.Checkbox-input:indeterminate ~ .Checkbox-icon:before {
+  opacity: 0.4;
+}
