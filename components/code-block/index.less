@@ -1,0 +1,26 @@
+/**
+ * Code Block:
+ * `.CodeBlock`: A block of code.
+ *
+ *     @example
+ *     - var open = '<pre class="CodeBlock">';
+ *     - var closed = '</pre>';
+ *     .CodeBlock
+ *       | #{open}
+ *       | .omg {
+ *       |   font-family: 'someta';
+ *       | }
+ *       | #{closed}
+ */
+
+@import "./config";
+
+.CodeBlock {
+  padding: @code-block-padding;
+  font-family: @code-block-font-family;
+  line-height: @code-block-line-height;
+  word-wrap: @code-block-word-wrap;
+  overflow: @code-block-overflow;
+  border-radius: @code-block-border-radius;
+  background-color: @code-block-background-color;
+}
