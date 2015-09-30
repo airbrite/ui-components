@@ -31,7 +31,8 @@
 
 #celery {
   .button-animation(@duration) {
-    transition: background-color @duration @button-transition-timing;
+    transition: @duration @button-transition-timing;
+    transition-property: background-color, opacity;
   }
 
   .button-vertical-padding(@height, @font-size, @border-width: 1px) {
@@ -46,6 +47,15 @@
     &:hover {
       color: @color;
       background-color: darken(@background-color, @color-grade-1);
+    }
+
+    &.is-disabled,
+    &:disabled {
+      opacity: 0.65;
+
+      &:hover {
+        background-color: @background-color;
+      }
     }
 
     &:active,
