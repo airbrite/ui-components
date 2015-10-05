@@ -134,15 +134,12 @@
 .Table-row {}
 
 .Table-header {
-  background-color: @table-header-background-color;
-
   .Table-headerCell {
-    padding: @table-header-padding;
+    padding: @table-header-padding-vertical @table-header-padding-horizontal;
   }
 }
 
 .Table-header--compact {
-  background: transparent;
   border-bottom: @table-border;
 }
 
@@ -154,7 +151,7 @@
 
 .Table-cell {
   font-size: @table-cell-font-size;
-  padding: @table-cell-padding;
+  padding: @table-cell-padding-vertical @table-cell-padding-horizontal;
   vertical-align: middle;
 }
 
@@ -174,7 +171,6 @@
 .Table-headerCell {
   &:extend(.Table-cell all);
   height: @table-header-height;
-  padding: @table-cell-padding;
   font-size: @table-header-font-size;
   font-weight: @table-header-font-weight;
   text-align: left;
