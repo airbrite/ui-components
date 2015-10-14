@@ -28,14 +28,15 @@
 
 .Button {
   display: inline-block;
-  border: @button-border;
-  border-radius: @button-rounded-border-radius;
+  min-width: @button-min-width;
   padding: @button-vertical-padding @button-horizontal-padding;
   font-size: @button-font-size;
   font-weight: @button-font-weight;
   line-height: 1;
   text-align: center;
   vertical-align: middle;
+  border: @button-border;
+  border-radius: @button-rounded-border-radius;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
@@ -136,4 +137,6 @@
 .Button--none {
   .Button--transparent;
   border: 0;
+  padding: 0;
+  min-width: auto;
 }
