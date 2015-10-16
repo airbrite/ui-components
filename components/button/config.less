@@ -20,6 +20,8 @@
 @button-transition-duration: 0.15s;
 @button-transition-fast-duration: 0.1s;
 
+@button-disabled-opacity:  0.65;
+
 @button-primary-color: @white;
 @button-primary-background-color: @green;
 
@@ -52,12 +54,9 @@
 
     &.is-disabled,
     &:disabled {
-      opacity: 0.65;
-
       &:hover,
       &:active,
       &:focus {
-        cursor: default;
         background-color: @background-color;
       }
     }

@@ -47,6 +47,17 @@
   #celery.button-vertical-padding(@button-height, @button-font-size);
   #celery.button-animation(@button-transition-duration);
 
+  &.is-disabled,
+  &:disabled {
+    opacity: @button-disabled-opacity;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: default;
+    }
+  }
+
   &:hover {
     #celery.button-animation(@button-transition-duration);
     text-decoration: none;
@@ -113,6 +124,16 @@
   border-color: @button-default-border-color;
   background-color: @button-default-background-color;
 
+  &.is-disabled {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: @button-disabled-opacity;
+      background-color: @button-default-background-color;
+    }
+  }
+
   &:hover {
     color: @blue;
     background-color: @gray-lighter;
@@ -140,4 +161,14 @@
   padding: 0;
   min-width: auto;
   font-size: inherit;
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: @button-disabled-opacity;
+      color: @blue;
+    }
+  }
 }
