@@ -5,14 +5,38 @@
  * * `#celery.input-default` - mixin for input default styles.
  *
  *     @example
- *     input.Input(type="text", placeholder="Text Input")
+ *     .Form-group
+ *       .Label Text
+ *       input.Input(type="text", placeholder="Text Input", value="Wombat")
+ *     .Form-group
+ *       .Label Number
+ *       input.Input.Input--number(type="text", placeholder="Number Input", value="200")
+ *     .Form-group
+ *       .Label Positive Modifier Number
+ *       input.Input.Input--number.is-modifier.is-positive(type="text", placeholder="Positive Modifier Number Input", value="400")
  */
 
 @import "./config";
+@import "../text/index";
 @import "../../util/layout";
+@import "../../util/typography";
 
 .Input {
   #celery.input-default;
+}
+
+.Input--number {
+  .u-alignRight;
+
+  &.is-modifier {
+    &.is-negative {
+      .text-danger;
+    }
+
+    &.is-positive {
+      .text-success;
+    }
+  }
 }
 
 .Input--expanded {
