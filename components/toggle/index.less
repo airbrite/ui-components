@@ -14,7 +14,6 @@
  *             i.Toggle-switch
  *           span.Toggle-labelText Fan
  *           span.Toggle-status Off
- *
  *     .Box
  *       .Toggle.is-on
  *         label.Toggle-label
@@ -33,6 +32,13 @@
 
 .Toggle--inline {
   display: inline-block;
+}
+
+// Toggle is used as a header to a panel/section
+.Toggle--heading {
+  .Toggle-labelText {
+    font-size: @toggle-heading-label-font-size;
+  }
 }
 
 .Toggle-label {
@@ -88,7 +94,7 @@
   height: @toggle-height - (@toggle-switch-gap * 2);
   width: @toggle-height - (@toggle-switch-gap * 2);
   position: absolute;
-  right: @toggle-switch-gap;
+  right: (@toggle-width - (@toggle-height - @toggle-switch-gap));
   top: @toggle-switch-gap;
   border-radius: 50%;
   background-color: @white;
@@ -110,7 +116,7 @@
 }
 
 .Toggle-input:checked ~ .Toggle-switch {
-  right: (@toggle-width - (@toggle-height - @toggle-switch-gap));
+  right: @toggle-switch-gap;
 }
 
 .Toggle-status {
