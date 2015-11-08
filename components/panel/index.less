@@ -54,12 +54,20 @@
   &:last-child {
     border-bottom: 0;
   }
+
+  & > * {
+    vertical-align: middle;
+  }
 }
 
 .Panel-heading {
   font-size: @panel-heading-font-size;
   line-height: @panel-heading-line-height;
   color: @panel-heading-color;
+}
+
+.Panel-heading--inline {
+  .Header-heading--inline
 }
 
 .Panel-headingIcon {
