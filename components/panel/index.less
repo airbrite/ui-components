@@ -83,6 +83,14 @@
   color: @panel-heading-color-light;
 }
 
+.Panel-subheading {
+  font-size: @panel-subheading-font-size;
+
+  &:not(:first-child) {
+    margin-top: @grid-gutter-width;
+  }
+}
+
 .Panel-header--divisor {
   border-top: 1px solid @input-border-color;
   margin-top: @panel-gutter-size;

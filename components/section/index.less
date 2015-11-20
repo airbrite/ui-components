@@ -38,3 +38,11 @@
 .Section-heading--inline {
   .Header-heading--inline;
 }
+
+.Section-subheading {
+  font-size: @section-subheading-font-size;
+
+  &:not(:first-child) {
+    margin-top: @grid-gutter-width;
+  }
+}
