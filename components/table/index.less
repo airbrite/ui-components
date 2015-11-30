@@ -136,6 +136,7 @@
 .Table-header {
   .Table-headerCell {
     padding: @table-header-padding-vertical @table-header-padding-horizontal;
+    vertical-align: @table-cell-vertical-align;
   }
 }
 
@@ -152,7 +153,7 @@
 .Table-cell {
   font-size: @table-cell-font-size;
   padding: @table-cell-padding-vertical @table-cell-padding-horizontal;
-  vertical-align: middle;
+  vertical-align: @table-cell-vertical-align;
 }
 
 .Table-cell--compact {
