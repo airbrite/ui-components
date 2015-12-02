@@ -5,6 +5,16 @@
  * * TODO: Convert magic numbers and refactor
  *
  *     @example
+ *     div.Radio
+ *       label.Radio-label.single
+ *         input.Radio-input(name="pricing_options", type="radio", value="no")
+ *         span.Radio-icon
+ *         span.Radio-text Only one size, color or material
+ *     div.Radio
+ *       label.Radio-label.single
+ *         input.Radio-input(name="pricing_options", type="radio", value="yes")
+ *         span.Radio-icon
+ *         span.Radio-text Multiple sizes, colors or materials
  *     div.Radio.Radio--inline
  *       label.Radio-label.single
  *         input.Radio-input(name="pricing_options", type="radio", value="no")
@@ -24,9 +34,11 @@
   vertical-align: middle;
   padding: 0;
   margin-right: @radio-margin;
+  margin-bottom: @radio-margin;
 
   &:last-child {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
