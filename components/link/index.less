@@ -9,10 +9,16 @@
 
 @import "./config";
 
-a {
-  color: @link-color;
+#celery {
+  .link {
+    color: @link-color;
+
+    &:hover {
+      color: @link-hover-color;
+    }
+  }
 }
 
-a:hover {
-  color: @link-hover-color;
+a {
+  #celery.link;
 }
