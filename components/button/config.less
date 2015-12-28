@@ -54,6 +54,15 @@
       background-color: darken(@background-color, @color-grade-1);
     }
 
+    &:focus {
+      background-color: darken(@background-color, (@color-grade-1 * .6));
+    }
+
+    &:active {
+      color: @color;
+      background-color: lighten(@background-color, @color-grade-1);
+    }
+
     &.is-disabled,
     &:disabled {
       &:hover,
@@ -61,12 +70,6 @@
       &:focus {
         background-color: @background-color;
       }
-    }
-
-    &:active,
-    &:focus {
-      color: @color;
-      background-color: lighten(@background-color, @color-grade-1);
     }
   }
 }

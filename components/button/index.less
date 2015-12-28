@@ -126,6 +126,21 @@
   border-color: @button-default-border-color;
   background-color: @button-default-background-color;
 
+  &:hover,
+  &:focus {
+    color: @blue;
+    background-color: @gray-lighter;
+  }
+
+  &:focus {
+    background-color: lighten(@gray-lighter, .5%);
+  }
+
+  &:active {
+    color: @blue;
+    background-color: darken(@gray-lighter, 2%);
+  }
+
   &.is-disabled {
     &,
     &:hover,
@@ -134,17 +149,6 @@
       opacity: @button-disabled-opacity;
       background-color: @button-default-background-color;
     }
-  }
-
-  &:hover {
-    color: @blue;
-    background-color: @gray-lighter;
-  }
-
-  &:active,
-  &:focus {
-    color: @blue;
-    background-color: darken(@gray-lighter, 2%);
   }
 }
 
