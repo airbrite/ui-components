@@ -6,13 +6,15 @@
 @button-small-font-size: @button-font-size - 1px;
 @button-large-font-size: @button-font-size + 3px;
 @button-font-weight: 400;
+@button-height: @button-font-size + (@button-border-width * 2) + (@button-vertical-padding * 2);
 
 @button-min-width: 100px;
 @button-height: @input-height-base;
 @button-vertical-padding: 15px;
 @button-horizontal-padding: 20px;
 
-@button-border: 1px solid transparent;
+@button-border-width: 1px;
+@button-border: @button-border-width solid transparent;
 @button-rounded-border-radius: @button-height;
 @button-sharp-border-radius: @border-radius-base;
 
