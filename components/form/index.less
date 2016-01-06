@@ -15,7 +15,13 @@
 
 @import "./config";
 
-.Form {}
+.Form {
+  margin-bottom: @form-margin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .Form-group {
   margin-bottom: @form-group-margin;
