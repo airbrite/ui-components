@@ -13,6 +13,8 @@
  *         a.Button.Button--action Action Button
  *       .col-xs
  *         a.Button.Button--transparent Transparent Button
+ *       .col-xs
+ *         a.Button.Button--danger Danger
  *     .row
  *       .col-xs
  *         a.Button.Button--small.Button--primary Small
@@ -118,6 +120,13 @@
   #celery.button-color(
     @button-action-color,
     @button-action-background-color
+  );
+}
+
+.Button--danger {
+  #celery.button-color(
+    @button-danger-color,
+    @button-danger-background-color
   );
 }
 
