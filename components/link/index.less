@@ -5,20 +5,20 @@
  *
  *     @example
  *     a(href="javascript:void(0)") Promo Code
+ *     a.Link.Link--danger(href="javascript:void(0)") Danger!
  */
 
 @import "./config";
 
-#celery {
-  .link {
-    color: @link-color;
-
-    &:hover {
-      color: @link-hover-color;
-    }
-  }
-}
-
+.Link,
 a {
   #celery.link;
+}
+
+.Link--danger {
+  color: @link-danger-color;
+
+  &:hover {
+    color: @link-danger-hover-color;
+  }
 }
