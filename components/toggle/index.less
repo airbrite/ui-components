@@ -23,6 +23,24 @@
  *             i.Toggle-switch
  *           span.Toggle-labelText Oven
  *           span.Toggle-status On
+ *     .Box
+ *       .Toggle.is-off.is-disabled
+ *         label.Toggle-label
+ *           .Toggle-control
+ *             input.Toggle-input(type="checkbox" disabled)
+ *             i.Toggle-background
+ *             i.Toggle-switch
+ *           span.Toggle-labelText Fan (disabled)
+ *           span.Toggle-status Off
+ *     .Box
+ *       .Toggle.is-on.is-disabled
+ *         label.Toggle-label
+ *           .Toggle-control
+ *             input.Toggle-input(type="checkbox" disabled checked)
+ *             i.Toggle-background
+ *             i.Toggle-switch
+ *           span.Toggle-labelText Oven (disabled)
+ *           span.Toggle-status On
  */
 
 .Toggle {
@@ -85,7 +103,7 @@
   right: 0;
   top: 0;
   display: block;
-  background-color: @gray-light;
+  background-color: @toggle-off-background-color;;
   border-radius: (@toggle-height/2);
   transition: background-color @toggle-transition-duration linear;
 }
@@ -102,11 +120,15 @@
 }
 
 .Toggle-input:checked ~ .Toggle-background {
-  background-color: @green;
+  background-color: @toggle-on-background-color;
 }
 
 .Toggle-input:disabled ~ .Toggle-background {
-  background-color: @gray-light;
+  background-color: @toggle-off-disabled-background-color;
+}
+
+.Toggle-input:checked:disabled ~ .Toggle-background {
+  background-color: @toggle-on-disabled-background-color;
 }
 
 // Disabled inputs doesn't fire events. By hidding the disabled input the
@@ -136,5 +158,12 @@
 .Toggle.is-off {
   .Toggle-status {
     color: @gray-light;
+  }
+}
+
+.Toggle.is-disabled {
+  .Toggle-control,
+  .Toggle-input {
+    cursor: not-allowed;
   }
 }
