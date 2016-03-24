@@ -35,9 +35,7 @@ var styledownAssets = funnel('styleguide', {
   include: ['**/*.css', '**/*.js'],
 });
 
-var styleguideHtml = new CompileStyledown([components, styleguideMd], {
-  configMd: 'config.md'
-});
+var styleguideHtml = new CompileStyledown([components, styleguideMd]);
 
 module.exports = mergeTrees([
   componentsLess,
