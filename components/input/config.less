@@ -13,6 +13,8 @@
 @input-border-color: @border-color;
 @input-border-radius: @border-radius-base;
 
+@input-is-invalid-border-color: @orange;
+
 @input-focus-border-color: @blue-dark;
 
 @input-disabled-background-color: @gray-lighter;
@@ -36,6 +38,10 @@
     &[disabled],
     &[readonly] {
       background-color: @input-disabled-background-color;
+    }
+
+    &.is-invalid {
+      border-color: @input-is-invalid-border-color;
     }
   }
 }
