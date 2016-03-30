@@ -29,10 +29,12 @@
     padding-right: @input-padding;
     color: @input-color;
     background-color: @input-background-color;
+    transition: all @transition-base;
 
     &:focus {
       outline: none;
       border-color: @input-focus-border-color;
+      transition: all @transition-base;
     }
 
     &[disabled],

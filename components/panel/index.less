@@ -40,7 +40,7 @@
 
 .Panel {
   #celery.default-border;
-  margin-bottom: @panel-margin;
+  margin-bottom: @panel-margin * 1.5;
 
   &:last-child {
     margin-bottom: 0;
@@ -53,6 +53,8 @@
 
 .Panel-header {
   padding: @panel-gutter-size;
+  padding-top: @panel-gutter-size * 0.7;
+  padding-bottom: @panel-gutter-size * 0.7;
   border-bottom: @border-base;
 
   &:last-child {
@@ -89,6 +91,7 @@
 
 .Panel-subheading {
   font-size: @panel-subheading-font-size;
+  line-height: 1.4em;
 
   &:not(:first-child) {
     margin-top: @grid-gutter-width;
@@ -102,6 +105,8 @@
 
 .Panel-body {
   padding: @panel-gutter-size;
+  padding-top: @panel-gutter-size * 0.7;
+  padding-bottom: @panel-gutter-size * 0.7;
 
   & + & {
     border-top: @border-base;
@@ -111,10 +116,12 @@
 .Panel-divider {
   border-bottom: @border-base;
   border-top: 0;
-  margin: @panel-gutter-size 0;
+  margin: @panel-gutter-size - 10 0;
 }
 
 .Panel-footer {
   border-top: 1px solid @input-border-color;
   padding: @panel-gutter-size;
+  padding-top: @panel-gutter-size * 0.7;
+  padding-bottom: @panel-gutter-size * 0.7;
 }
