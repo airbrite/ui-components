@@ -34,6 +34,18 @@ Open the styleguide by opening `build/index.html` in your browser.
 
 Don't forget to document things in the comments of the index files. Use [Styledown syntax](https://github.com/styledown/styledown/blob/master/docs/Documenting.md).
 
+## Deploying
+
+In order to publish, you must be a part of the @celery npm group.
+
+```
+git checkout master
+git pull
+npm version [major/minor/patch]
+git push
+npm publish
+```
+
 ## TODO
 
 * Livereload styles
