@@ -54,7 +54,9 @@
 
   &.is-disabled,
   &:disabled {
-    opacity: @button-disabled-opacity;
+    color: @button-disabled-color;
+    background-color: @gray-lighter;
+    cursor: not-allowed;
 
     &:hover,
     &:active,
@@ -156,8 +158,9 @@
     &:hover,
     &:active,
     &:focus {
-      opacity: @button-disabled-opacity;
-      background-color: @button-default-background-color;
+      color: @button-disabled-color;
+      background-color: @gray-lighter;
+      cursor: not-allowed;
     }
   }
 }
@@ -185,8 +188,9 @@
     &:hover,
     &:active,
     &:focus {
-      opacity: @button-disabled-opacity;
-      color: @blue-dark;
+      color: @button-disabled-color;
+      background-color: @gray-lighter;
+      cursor: not-allowed;
     }
   }
 }
